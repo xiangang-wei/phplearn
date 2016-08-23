@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bob's Auto Parts</title>
+    <style type="text/css">
+        th {
+            background-color: #cccccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Bob's Auto Parts</h1>
+<h2>Order Form</h2>
+<form action="processorder.php" method="post">
+    <table>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>
+                Tires
+            </td>
+            <td>
+                <input type="text" name="tireqty">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Oil
+            </td>
+            <td>
+                <input type="text" name="oilqty">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Spark Plugs
+            </td>
+            <td>
+                <input type="text" name="sparkqty">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Address
+            </td>
+            <td>
+                <input type="text" name="address" style="width: 400px">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Submit Order">
+            </td>
+        </tr>
+    </table>
+</form>
+<a href="CustomerFeedback.html">Customer feedback!</a><br /><br />
+</body>
+</html>

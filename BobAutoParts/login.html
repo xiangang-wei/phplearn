@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin login</title>
+    <style>
+        .container{
+            width:400px;
+            border: 1px solid black;
+            margin:auto;
+            background-color: cornsilk;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1 align="center" style="margin-top: 70px">Welcome to login our system!</h1>
+<div class="container">
+    <form action="vieworders.php" method="post" onsubmit="return validation(this)">
+        <table>
+            <tr>
+                <td>
+                    name:
+                </td>
+                <td>
+                    <input type="text" name="fname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    password:
+                </td>
+                <td>
+                    <input type="password" name="pwd">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="提交">
+                </td>
+                <td>
+                    <input type="reset" value="取消">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+<script>
+    function validation(field) {
+        with (field){
+            with (fname){
+                if(value==null || value== ""){
+                    focus();
+                    return false;
+                }else if (value !="admin"){
+                    focus();
+                    value= "";
+                    alert("请输入正确的用户名!");
+                    return false;
+                }
+
+            }
+            with (pwd){
+                if(value==null || value== ""){
+                    focus();
+                    return false;
+                }else if(value!= "admin"){
+                    focus();
+                    value= "";
+                    alert("请输入正确的密码!");
+                    return false;
+                }
+            }
+        }
+
+    }
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Feedback!</title>
+</head>
+<body>
+<h1>Customer Feedback</h1>
+<h3>Please tell us what you think.</h3>
+<form action="viewCustomerFeedback.php" method="post" onsubmit="return validation(this)">
+    Your name: <br />
+        <input type="text" name="name" style="width: 300px">
+    <br /><br />
+    Your email address: <br />
+    <input type="text" name="email" style="width: 300px;"><br /><br />
+    Your feedback: <br />
+    <textarea name="feedback" rows="12" cols="70"></textarea><br /><br />
+    <input type="submit" value="Submit feedback">
+</form>
+<script>
+    function validation(field) {
+        with (field){
+            with (name){
+                if(value==null || value==""){
+                    alert("请输入姓名!");
+                    focus();
+                    return false;
+                }
+            }
+            with (email){
+                var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+                if(!myreg.test(value)) {
+                    alert('提示\n\n请输入有效的E_mail！');
+                    focus();
+                    return false;
+                }
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

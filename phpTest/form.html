@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单提交</title>
+    <script>
+        function validationRequest(field, alertTxt) {
+            with(field){
+                if(value==null || value==""){
+                    alert(alertTxt);
+                    return false;
+                }else{
+                    return true;
+                }
+
+            }
+        }
+        function validation(thisForm) {
+            with(thisForm){
+                if(validationRequest(fname,"name must been filled!")==false){
+                    fname.focus();
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="formTest.php" method="post" onsubmit="return validation(this)">
+        <table>
+            <tr>
+                <td>
+                    name:
+                </td>
+                <td>
+                    <input type="text" name="fname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    password:
+                </td>
+                <td>
+                    <input type="password" name="pwd">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="提交">
+                </td>
+                <td>
+                    <input type="reset" value="取消">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
