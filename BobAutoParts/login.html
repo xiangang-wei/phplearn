@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <title>Admin login</title>
     <style>
-        .container{
-            width:400px;
+        .container {
+            width: 400px;
             border: 1px solid black;
-            margin:auto;
+            margin: auto;
             background-color: cornsilk;
         }
-        table{
+
+        table {
             margin-left: auto;
             margin-right: auto;
             margin-top: 30px;
@@ -53,26 +54,26 @@
 </body>
 <script>
     function validation(field) {
-        with (field){
-            with (fname){
-                if(value==null || value== ""){
+        with (field) {
+            with (fname) {
+                if (value == null || value == "") {
                     focus();
                     return false;
-                }else if (value !="admin"){
+                } else if (value != "admin") {
                     focus();
-                    value= "";
+                    value = "";
                     alert("请输入正确的用户名!");
                     return false;
                 }
 
             }
-            with (pwd){
-                if(value==null || value== ""){
+            with (pwd) {
+                if (value == null || value == "") {
                     focus();
                     return false;
-                }else if(value!= "admin"){
+                } else if (value != "admin") {
                     focus();
-                    value= "";
+                    value = "";
                     alert("请输入正确的密码!");
                     return false;
                 }

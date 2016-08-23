@@ -12,8 +12,8 @@
  * Date: 16/7/25
  * Time: 下午10:38
  */
-    echo "你的姓名是: ".$_POST["fname"]."<br>";
-    echo "你的密码是: ".$_POST["pwd"]."<br>";
+echo "你的姓名是: " . $_POST["fname"] . "<br>";
+echo "你的密码是: " . $_POST["pwd"] . "<br>";
 ?>
 </body>
 </html>

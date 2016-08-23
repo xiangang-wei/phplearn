@@ -5,17 +5,17 @@
  * Date: 16/8/4
  * Time: 上午9:13
  */
-$name= $_POST["name"];
-$email= $_POST["email"];
-$feedback= $_POST["feedback"];
+$name = $_POST["name"];
+$email = $_POST["email"];
+$feedback = $_POST["feedback"];
 
-$fromaddress= "From: webserver@example.com";
-$toaddress= "515192471@qq.com";
-$subject= "Customer Feedback";
+$fromaddress = "From: webserver@example.com";
+$toaddress = "515192471@qq.com";
+$subject = "Customer Feedback";
 
-$content= "Customer name: ".$name."\n"."Customer email: ".$email."\n"."Customer feedbaack: ".$feedback."\n";
+$content = "Customer name: " . $name . "\n" . "Customer email: " . $email . "\n" . "Customer feedbaack: " . $feedback . "\n";
 
-mail($toaddress,$subject,$content,$fromaddress);
+mail($toaddress, $subject, $content, $fromaddress);
 ?>
 <html>
 <head>
